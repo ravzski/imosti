@@ -1,0 +1,42 @@
+.modal id="#{s.id}_modal"
+  .modal-dialog
+    .modal-content
+      .modal-header.modal-primary
+        button.close aria-hidden="true" data-dismiss="modal" type="button"  &times;
+        h3 Site CMS
+        
+       
+      .modal-body
+        = form_for [:admin,s], :class => "" do |f|
+          
+          = f.text_field :category, :class=>"hidden",:value=>params[:category]
+
+
+          .form-group
+            label 
+              | Status
+            =f.select(:is_active, options_for_select(@status,f.object.is_active),{},:class=>"form-control")
+
+
+          .form-group
+            label 
+              | Title
+            = f.text_field :title, :class=>"form-control"
+
+
+
+          -if is_content_visible?
+            .form-group
+              label 
+                | Content
+              = f.text_area :content, :class=>"form-control",:rows=>5
+
+
+
+          .form-group
+            label Photo
+            =render '/admin/partials/photo_field',:f=>f
+
+      .modal-footer
+        a.btn.btn-success.submit-modal-btn 
+          i.fa.fa-save

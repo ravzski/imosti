@@ -1,0 +1,8 @@
+-@galleries.each do |g|
+  .portfolio-item.col-md-2.col-sm-6
+    .portfolio-thumb
+      =image_tag(g.photo.url)
+      .portfolio-overlay
+        h3 =g.title
+        a.expand data-rel="lightbox" href="#{g.photo.url}"
+          i.fa.fa-search

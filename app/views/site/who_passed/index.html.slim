@@ -1,0 +1,21 @@
+.jumbotronn
+  .fa-5x align="center" 
+    | "Who passed their training in IMOSTI"
+br
+br
+.container
+  -@students.each do |course, students|
+    h2.site1 =course
+    br
+    table.table.table-bordered
+      thead
+        tr
+          th Name
+          th Date
+          th Cert No
+      tbody
+        -students.each do |s|
+          tr
+            td =s.name
+            td =format_date s.passed_date
+            td = s.cert_no

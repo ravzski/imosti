@@ -1,0 +1,14 @@
+<title>IMOSTI</title>
+<meta name="description" content="The International Maritime &amp; Offshore Safety Training Institute (IMOSTI), Inc. is a centre for learning and competence development dedicated to administering training services for marine &amp; offshore sectors. Operating in compliance with the premier quality standards &amp; regulations of industry based organisations."><meta name="keywords" content="International Maritime &amp; Offshore Safety Training Institute, imosti, IMOSTI, training services, marine, offshore, home, training center, training centre, D.P., Manila DP, Philippines DP, Dynamic Positioning Philippines"><link rel="shortcut icon" href="http://www.imosti.com/favicon.png" />
+
+<meta property="og:title" content="IMOSTI">
+<meta property="og:description" content="The International Maritime &amp; Offshore Safety Training Institute (IMOSTI), Inc. is a centre for learning and competence development dedicated to administering training services for marine &amp; offshore sectors. Operating in compliance with the premier quality standards &amp; regulations of industry based organisations.">
+<meta property="og:image" content="http://www.imosti.com/images/fb-image.jpg">
+
+<!--<meta name="twitter:card" content="summary">
+<meta name="twitter:url" content="http://www.xxxxxxxxxx.com">-->
+
+<meta name="twitter:title" content="IMOSTI">
+<meta name="twitter:description" content="The International Maritime &amp; Offshore Safety Training Institute (IMOSTI), Inc. is a centre for learning and competence development dedicated to administering training services for marine &amp; offshore sectors. Operating in compliance with the premier quality standards &amp; regulations of industry based organisations.">
+<meta name="twitter:image" content="http://www.imosti.com/images/tw-image.png">
+

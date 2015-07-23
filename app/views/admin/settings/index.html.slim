@@ -1,0 +1,61 @@
+.row
+  .col-md-12
+    .panel.with-footer
+      .panel-heading
+        h4 Profile
+      .panel-body
+
+
+        -unless flash[:error].blank?
+          .alert.alert-danger.alert-dismissable
+            button type="button" class="close" data-dismiss="alert" aria-hidden="true"
+              i.fa.fa-times
+            strong.error-class
+              =flash[:error]
+
+
+        = form_for [:admin,current_user] do |f|
+
+          .form-group
+            label 
+              | Email
+            span.text-danger *
+            =f.text_field :email, :class=>"form-control required",:maxlength=>25
+
+
+
+
+          .form-group
+            label 
+              | Old Password
+
+            =password_field_tag :current_password,'', :class=>"form-control", :autocomplete=>"off",:maxlength=>25
+
+
+          .form-group
+            label 
+              | New Password (min of 8 characters)
+
+            =f.password_field :password, :class=>"form-control password", :autocomplete=>"off",:maxlength=>25
+
+
+          .form-group
+            label 
+              | Confirm Password (min of 8 characters)
+
+            =f.password_field :password_confirmation, :class=>"form-control password", :autocomplete=>"off",:maxlength=>25
+
+                
+
+    .panel-footer
+      .row
+        .col-md-12
+          .pull-right
+            a.btn.btn-success.submit-password.btn-icon
+              i.fa.fa-save
+              |Save
+
+
+  
+
+    

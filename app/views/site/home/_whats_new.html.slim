@@ -1,0 +1,9 @@
+-@news.each_with_index do |n, index|
+
+  div class="item #{'active' if index == 0}"
+    =image_tag(n.photo.url)
+    .carousel-caption
+      .h11
+        =n.title
+      .h22
+        =raw n.content

@@ -1,0 +1,18 @@
+.row
+  .col-md-6
+    .panel.center
+      .panel-heading 
+        h4 Login
+      .panel-body
+        = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+         
+          .form-group
+            = f.email_field :email, :class=>"form-control input-lg",:placeholder=>"email"
+
+          .form-group.push-bot-10
+            = f.password_field :password, :class=>"form-control input-lg",:placeholder=>"password"
+          
+
+          .form-group
+            = f.submit "Login", :class => "btn-block btn btn-success"
+          

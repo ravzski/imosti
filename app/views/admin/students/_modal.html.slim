@@ -1,0 +1,40 @@
+.modal id="#{s.id}_modal"
+  .modal-dialog
+    .modal-content
+      .modal-header.modal-primary
+        button.close aria-hidden="true" data-dismiss="modal" type="button"  &times;
+        h3 Students
+        
+       
+      .modal-body
+        = form_for [:admin,s], :class => "" do |f|
+          
+
+
+          .form-group
+            label 
+              | Name
+            = f.text_field :name, :class=>"required form-control"
+
+
+          .form-group
+            label 
+              | Course
+            = f.text_field :course, :class=>"form-control"
+
+
+          .form-group
+            label 
+              | Date
+            = f.text_field :passed_date, :class=>"date form-control"
+
+
+          .form-group
+            label 
+              | Cert No
+            = f.text_field :cert_no, :class=>"form-control"
+
+
+      .modal-footer
+        a.btn.btn-success.submit-modal-btn 
+          i.fa.fa-save

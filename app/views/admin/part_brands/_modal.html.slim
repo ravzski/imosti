@@ -1,0 +1,26 @@
+.modal id="#{s.id}_modal"
+  .modal-dialog
+    .modal-content
+      .modal-header.modal-primary
+        button.close aria-hidden="true" data-dismiss="modal" type="button"  &times;
+        h3 Part Brand
+        
+       
+      .modal-body
+        = form_for [:admin,s] do |f|
+
+          .form-group
+            label Status
+            =f.select(:status, options_for_select(@status),{},:class=>"form-control")
+            
+          .form-group
+            label Name
+            = f.text_field :name,:class=>"form-control required"
+
+          .form-group
+            label Photo
+            =render '/admin/partials/photo_field',:f=>f
+
+      .modal-footer
+        a.btn.btn-success.submit-modal-btn 
+          i.fa.fa-save

@@ -1,0 +1,38 @@
+.panel-heading 
+  a.btn.btn-primary.pull-right data-toggle="modal" data-target="#_modal"
+    i.fa.fa-plus
+  h4 Site CMS
+.panel-body
+  .col-md-2.no-pad-right
+    =render '/admin/partials/posts_nav'
+  .col-md-10.border-left.min-200
+    table.table.table-hover
+      thead
+        tr
+          td Name
+          td Course
+          td Cert
+          td Date
+          td.text-right.action-m
+      tbody.pushable
+        -@students.each do |c|
+          tr
+            td 
+              =c.name
+            td
+              =c.course
+            td
+              =c.cert_no
+            td
+              =format_date c.passed_date
+            td
+              .btn-group
+                a.btn.btn-default.btn-action  data-toggle="modal" data-target="##{c.id}_modal"
+                  i.fa.fa-pencil
+                a.btn.btn-danger.btn-action  href="/admin/students/#{c.id}" data-confirm="Are you sure?" data-method="delete" rel="nofollow"
+                  i.fa.fa-trash-o
+                =render 'modal',:s=>c
+
+
+
+=render 'modal',:s=>@student

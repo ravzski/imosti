@@ -1,0 +1,9 @@
+-if @sliders.present?
+  -@sliders.each do |s|
+    li
+      .overlay
+      =image_tag(s.photo.url)
+      .slider-caption.visible-md.visible-lg
+        h2 IMOSTI
+        p =s.title
+        a href="https://s3-ap-southeast-1.amazonaws.com/imosti/IMOSTI+Corporate+Profile.pdf" class="slider-btn" target="_blank" View the Company Profile

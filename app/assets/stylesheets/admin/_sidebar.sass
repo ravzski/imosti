@@ -1,0 +1,109 @@
+.sidebar
+  float: left
+  height: 100%
+  position: fixed
+  width: 60px
+  background-color: $dark
+  color: #cbced3
+  -webkit-transition: width 0.2s
+  transition: width 0.2s
+  z-index: 99999
+  top: 0px
+  .nav
+    top: 0
+    left: 0
+    right: 0
+    position: absolute
+
+    ul
+      margin: 0
+      list-style: none
+      padding-left: 0px
+      li
+        position: relative
+        a 
+          color: #cbced3
+          display: block
+          padding: 16px 15px
+          text-decoration: none
+          border-top: 1px solid rgba(255, 255, 255, 0.04)
+          -webkit-transition: color 250ms ease
+          -moz-transition: color 250ms ease
+          transition: color 250ms ease
+          i
+            display: block
+            padding: 0
+            min-width: 100%
+            font-size: 20px
+            padding-left: 4px
+            .nav-title
+              font-size: 12px
+              vertical-align: middle
+              padding-left: 7px
+        &:hover
+          background-color: #22242b
+          .dropdown-menu 
+            display: block
+
+        &.bottom:hover
+          background-color: transparent
+
+  &.small
+    .nav-title
+      display: none
+
+  &.expanded
+    width: 200px
+    .nav-title
+      display: inline
+    li.bottom
+      left: 143px
+
+  .dropdown-menu
+    position: absolute
+    top: 0px
+    left: 100%
+    border: 1px solid #d1d1d1
+    border-left: 0
+    padding: 0!important
+    border-radius: 0px
+    background-color: #1d1f26
+    li
+      a
+        padding: 5px 5px 5px 10px !important
+        text-align: left
+        font-size: 12px
+      &:hover
+        background-color: #22242b !important
+
+  .collapse-btn
+    padding: 5px 5px 5px 3px !important
+    width: 30px
+    background: rgba(0,0,0,0.1)
+    border-radius: 2px
+    margin-right: 15px
+    text-align: center
+    left: 143px
+    margin-left: 15px
+    &.expand-sidebar
+      left: 0px
+
+
+
+  li.bottom
+    position: fixed !important
+    bottom: 10px !important
+    width: 60px
+    left: 0
+    right: 0
+
+
+.dropdown-menu > li > a:hover
+  background-color: #22242b !important
+
+.filler
+  background-color: #0baec7
+  padding: 6px
+  min-height: 52px
+  img
+    width: 29px 
